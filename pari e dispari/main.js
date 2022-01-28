@@ -1,5 +1,3 @@
-//!Pari e Dispari 
-
 //!L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. 
 
 let NumeroUtente = parseInt(prompt("inserisci un numero da 1 a 5"));

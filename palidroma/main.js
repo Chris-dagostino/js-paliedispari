@@ -10,7 +10,7 @@ function parolaUtente (palindroma) {
     if (parola == parolaInversa) {
         alert ('la parola inserita non è palindroma');
 
-    }else if {
+    }else {
         ritorno = parolaIns;
     }
 
