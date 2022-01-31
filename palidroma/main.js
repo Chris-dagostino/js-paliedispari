@@ -1,35 +1,28 @@
 //!Chiedere all’utente di inserire una parola
 //!Creare una funzione per capire se la parola inserita è palindroma
 
-function parolaUtente (palindroma) {
+function controlloPalindroma (palora) {
 
     let ritorno;
 
-    let parolaIns = prompt (palindroma) ;
+    let parolaSplit = parolaDue.split('');
 
-    if (parola == parolaInversa) {
-        alert ('la parola inserita non è palindroma');
+    let parolaReverse = parolaSplit.reverse();
+
+    let parolaDaConfrontare = parolaReverse.join('*');
+
+    if (parola == parolaDaConfrontare) {
+        ritorno ('la parola inserita è palindroma');
 
     }else {
-        ritorno = parolaIns;
+        ritorno = ('la parola inserita non è palindroma');
     }
 
     return ritorno;
 }
 
-const parolaPalindroma = parolaUtente ('inserisci una parola palindroma'));
-console.log(parolaPalindroma);
+let parolaUtente = prompt('inserisci una parola');
 
-let parola = parolaIns ;
-let carattere;
-let parolaInversa = '';
+let verifica = controlloPalindroma(parolaUtente);
 
-for (let i = parola.length - 1 ; i >= 0 ; i--) {
-    carattere = parola [i];
-    parolaInversa += carattere;
-
-    console.log(carattere);
-    
-}
-
-console.log(parolaInversa);
+console.log(verifica);

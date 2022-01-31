@@ -1,48 +1,44 @@
-//!L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. 
+function getRandomNumber (min,max) {
 
-
-let scelta = prompt ('scegli pari o dispari');
-
-
-let NumeroUtente = parseInt(prompt("inserisci un numero da 1 a 5"));
-
-
-console.log(NumeroUtente);
-console.log(scelta);
-
-
-
-//!Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). 
-
-function randomNumber ( min , max ) {
-    return Math.floor(Math.random() * ( max - min ) + min );
+    return Math.floor(Math.random() * ( max - min +1 )) + min ;
 }
 
-let numberPc = parseInt(randomNumber ( 1 , 5 ));
+function checkPariDispari(numero); {
 
+    let ritorno;
 
-console.log(numberPc);
-
-
-
-//!Sommiamo i due numeri 
-
-let somma = NumeroUtente + numberPc;
-
-console.log(somma);
-
-
-//!Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) 
-
-function pariDispari (somma) {
-    
-    if (somma % 2 == 0 ) {
-        alert ('il numero è pari')
+    if (numero % 2 == 0 ) {
+        ritorno = "pari";
     }else {
-        alert ('il numero è dispari')
+        ritorno = "dispari";
     }
 }
 
 
+let PariDispari = prompt('scegli pari o dispari').toUpperCase();
 
-//!Dichiariamo chi ha vinto.
+if (PariDispari == "pari"  || PariDispari =="dispari" ){
+
+    let numeroUtente = parseInt(prompt('inserisci un numero tra 1 e 5'));
+
+    if (numeroUtente >= 1 && numeroUtente <=5  || && !isNaN(numeroUtente)) {
+
+        let numeroComputer = getRandomNumber(1 , 5);
+        let somma = numeroUtente + numeroComputer;
+
+        let verificaSomma = checkPariDispari(somma);
+
+        if (verificaSomma == pariDispari) {
+            alert ('hai vinto');
+
+        }else {
+            alert ('ha vinto il computer');
+        }
+
+    }else {
+        alert('hai inserito un valore non valido')
+    }
+
+} else {
+    alert ('hai inserito un valore non valido')
+}
